@@ -1,5 +1,3 @@
-__version__ = "1.0.0"
-
 import random
 
 word_list = [
