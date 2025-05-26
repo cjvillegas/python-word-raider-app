@@ -1,4 +1,5 @@
 import random
+import notify
 
 word_list = [
     'sword',
@@ -60,22 +61,8 @@ def word_raider():
 
     return False if attempts == max_guesses else True
 
-
-def print_instructions():
-    print('Welcome to Word Raider!')
-    print('A random 5 letter word will be chosen.')
-    print('You have 5 attempts to guess the correct word.')
-    print('Good luck!')
-    print('\n')
-
-def print_results(game_counter, won_counter, lost_counter):
-    print('Game results:')
-    print(f'Games played: {game_counter}')
-    print(f'Games won: {won_counter}')
-    print(f'Games lost: {lost_counter}')
-
 def main():
-    print_instructions()
+    notify.print_instructions()
 
     game_counter = 0
     won_counter = 0
@@ -98,7 +85,4 @@ def main():
             print('Thanks for playing!')
             in_game = False
 
-    print_results(game_counter, won_counter, lost_counter)
-
-
-main()
+    notify.print_results(game_counter, won_counter, lost_counter)
